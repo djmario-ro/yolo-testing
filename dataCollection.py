@@ -9,7 +9,7 @@ classID = 0  # 0 is fake and 1 is real
 outputFolderPath = 'Dataset/DataCollect'
 confidence = 0.8
 save = True
-blurThreshold = 35  # Larger is more focus
+blurThreshold = 60  # Larger is more focus
 
 debug = False
 offsetPercentageW = 10
