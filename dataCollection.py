@@ -19,7 +19,7 @@ floatingPoint = 6
 ####################################
 
 
-cap = cv2.VideoCapture(1)
+cap = cv2.VideoCapture(0)
 cap.set(3, camWidth)
 cap.set(4, camHeight)
 
@@ -96,12 +96,12 @@ while True:
                 timeNow = time()
                 timeNow = str(timeNow).split('.')
                 timeNow = timeNow[0] + timeNow[1]
-                cv2.imwrite(f"{outputFolderPath}/{timeNow}.jpg", img)
+                # cv2.imwrite(f"{outputFolderPath}/{timeNow}.jpg", img)
                 # ------  Save Label Text File  --------
-                for info in listInfo:
-                    f = open(f"{outputFolderPath}/{timeNow}.txt", 'a')
-                    f.write(info)
-                    f.close()
+                # for info in listInfo:
+                #     f = open(f"{outputFolderPath}/{timeNow}.txt", 'a')
+                #     f.write(info)
+                #     f.close()
 
     cv2.imshow("Image", imgOut)
     cv2.waitKey(1)
