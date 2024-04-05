@@ -83,7 +83,7 @@ while True:
                 # ------  Drawing --------
                 cv2.rectangle(imgOut, (x, y, w, h), (255, 0, 0), 3)
                 cvzone.putTextRect(imgOut, f'Score: {int(score * 100)}% Blur: {blurValue}', (x, y - 0),
-                                   scale=2, thickness=3)
+                    scale=2, thickness=3)
                 if debug:
                     cv2.rectangle(img, (x, y, w, h), (255, 0, 0), 3)
                     cvzone.putTextRect(img, f'Score: {int(score * 100)}% Blur: {blurValue}', (x, y - 0),
@@ -96,12 +96,12 @@ while True:
                 timeNow = time()
                 timeNow = str(timeNow).split('.')
                 timeNow = timeNow[0] + timeNow[1]
-                # cv2.imwrite(f"{outputFolderPath}/{timeNow}.jpg", img)
+                #cv2.imwrite(f"{outputFolderPath}/{timeNow}.jpg", img)
                 # ------  Save Label Text File  --------
-                # for info in listInfo:
-                #     f = open(f"{outputFolderPath}/{timeNow}.txt", 'a')
-                #     f.write(info)
-                #     f.close()
+                #for info in listInfo:
+                #    f = open(f"{outputFolderPath}/{timeNow}.txt", 'a')
+                #    f.write(info)
+                #    f.close()
 
     cv2.imshow("Image", imgOut)
     cv2.waitKey(1)
